@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();// 123
+        int m=n;
+        int sum=0;
+        while(m!=0){
+            int rem=m%10;
+            sum+=Math.pow(rem,3);
+            m/=10;
+        }
+       if(sum==n) System.out.println(n+" is arm strong Number");
+       else System.out.println(n+" is not a arm strong Number");
+	}
+}
