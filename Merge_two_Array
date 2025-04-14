@@ -1,0 +1,29 @@
+// merge array in ascending order 
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        int arr[]=new int[]{2,1,6,3,8,4};
+        int brr[]=new int[]{0,3,7,1,2,9,10};
+        int res[]=new int[arr.length+brr.length];
+        // ArrayList<Integer> list=new ArrayList<>();
+        // for(int i=0;i<arr.length;i++){
+        //     list.add(arr[i]);
+        // }
+        // for(int i=0;i<brr.length;i++){
+        //     list.add(brr[i]);
+        // }
+        // Collections.sort(list);
+        // Collections.reverse(list);
+        // System.out.println(list);
+        for(int i=0;i<arr.length;i++){
+            res[i]=arr[i];
+        }
+        for(int i=0;i<brr.length;i++){
+            res[i+arr.length-1]=brr[i];
+        }
+        Arrays.sort(res);
+        for(int i=0;i<res.length;i++){
+            System.out.print(res[i]+" ");
+        }
+    }
+}
